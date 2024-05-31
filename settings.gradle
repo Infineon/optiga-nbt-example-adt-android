@@ -1,0 +1,34 @@
+// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
+//
+// SPDX-License-Identifier: MIT
+
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = 'nbt_adt_demonstrator'
+include ':app'
+include('com.infineon.hsw.utils')
+include('com.infineon.hsw.channel')
+include('com.infineon.hsw.ndef')
+include('com.infineon.hsw.ndef.bp')
+include('com.infineon.hsw.apdu')
+include('com.infineon.hsw.apdu.nbt')
+project(':com.infineon.hsw.utils').projectDir = file('app/libs/hsw-utils-java')
+project(':com.infineon.hsw.channel').projectDir = file('app/libs/hsw-channel-java')
+project(':com.infineon.hsw.ndef').projectDir = file('app/libs/hsw-ndef-java')
+project(':com.infineon.hsw.ndef.bp').projectDir = file('app/libs/hsw-ndef-bp-java')
+project(':com.infineon.hsw.apdu').projectDir = file('app/libs/hsw-apdu-java')
+project(':com.infineon.hsw.apdu.nbt').projectDir = file('app/libs/hsw-apdu-nbt-java')
+
+// Workaround for excluding tests of libraries during build
+gradle.ext.test = 'src/test/test.gradle'

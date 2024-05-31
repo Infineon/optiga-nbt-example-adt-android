@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- SPDX-FileCopyrightText: 2024 Infineon Technologies AG -->
+<!-- SPDX-License-Identifier: MIT -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-feature android:name="android.hardware.nfc" android:required="true" />
+
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_label"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+
+        <activity
+            android:name="com.infineon.css.nbt_adt_demonstrator.SplashScreenActivity"
+            android:theme="@style/AppTheme.SplashScreen"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name="com.infineon.css.nbt_adt_demonstrator.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name="com.infineon.css.nbt_adt_demonstrator.ReadActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.infineon.css.nbt_adt_demonstrator.WriteActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

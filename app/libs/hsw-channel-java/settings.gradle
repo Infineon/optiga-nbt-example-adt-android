@@ -1,0 +1,17 @@
+// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
+//
+// SPDX-License-Identifier: MIT
+
+/*
+ * This file contains the gradle settings
+ */
+
+rootProject.name = 'com.infineon.hsw.channel'
+gradle.ext.major = 0
+gradle.ext.minor = 2
+gradle.ext.patch = 3
+gradle.ext.prerelease = ''
+
+// This file is for internal development purposes and will not be present
+// in the release package.
+gradle.ext.test = 'src/test/test.gradle'

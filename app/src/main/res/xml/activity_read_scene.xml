@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- SPDX-FileCopyrightText: 2024 Infineon Technologies AG -->
+<!-- SPDX-License-Identifier: MIT -->
+
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="2000"
+        motion:motionInterpolator="linear"
+        motion:autoTransition="animateToEnd">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/image_card"
+            motion:layout_constraintEnd_toStartOf="@+id/guideline_v_V"
+            motion:layout_constraintStart_toEndOf="@id/guideline_v_IV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintTop_toBottomOf="@+id/textView_cardTap"
+            motion:layout_constraintDimensionRatio="1.4" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            motion:layout_constraintTop_toBottomOf="@+id/textView_cardTap"
+            motion:layout_constraintDimensionRatio="1.4"
+            motion:layout_constraintEnd_toStartOf="@+id/guideline_v_IV"
+            motion:layout_constraintStart_toStartOf="@+id/guideline_v_I"
+            android:id="@+id/image_phone" />
+        <Constraint
+            android:id="@+id/image_card"
+            motion:layout_constraintEnd_toStartOf="@+id/guideline_v_V"
+            motion:layout_constraintStart_toEndOf="@+id/guideline_v_II"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintTop_toBottomOf="@+id/textView_cardTap"
+            motion:layout_constraintDimensionRatio="1.4" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/end"
+        motion:constraintSetEnd="@+id/start"
+        motion:autoTransition="animateToEnd"
+        motion:motionInterpolator="easeOut"
+        motion:pathMotionArc="none" />
+</MotionScene>

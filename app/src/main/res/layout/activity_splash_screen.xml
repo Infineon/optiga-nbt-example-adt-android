@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- SPDX-FileCopyrightText: 2024 Infineon Technologies AG -->
+<!-- SPDX-License-Identifier: MIT -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="@android:color/white"
+android:orientation="vertical"
+tools:context="com.infineon.css.nbt_adt_demonstrator.SplashScreenActivity"
+tools:ignore="Overdraw"
+    >
+
+<ImageView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scaleType="centerCrop"
+    android:src="@drawable/splashscreen"
+    android:adjustViewBounds="true"
+    android:contentDescription="@string/splashscreen_contentdescription"
+    />
+
+</FrameLayout>

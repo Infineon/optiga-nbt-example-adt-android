@@ -1,0 +1,19 @@
+<!-- SPDX-FileCopyrightText: 2024 Infineon Technologies AG -->
+<!-- SPDX-License-Identifier: MIT -->
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!-- <item name="android:windowBackground">@drawable/background</item> -->
+    </style>
+
+    <!-- IFX SplashScreen theme. -->
+    <style name="AppTheme.SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+</resources>

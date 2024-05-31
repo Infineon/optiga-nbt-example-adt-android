@@ -1,0 +1,41 @@
+<!-- SPDX-FileCopyrightText: 2024 Infineon Technologies AG -->
+<!-- SPDX-License-Identifier: MIT -->
+
+<resources>
+
+    <string name="splashscreen_contentdescription">Infineon example app</string>
+
+    <!--NBT Async. Data Transfer -->
+    <!-- Titles -->
+    <string name="app_title">NBT Async. Data Transfer</string>
+    <string name="app_subtitle">OPTIGA&#8482;\u00A0Authenticate\u00A0NBT</string>
+    <string name="app_label">NBT ADT</string>
+    <!-- Notifications -->
+    <!-- App specific strings -->
+    <string name="string_select_usecase">Would you like to read from or write to the OPTIGA&#8482;\u00A0Authenticate\u00A0NBT?</string>
+
+    <string name="string_read_tap">Please tap your mobile phone to the OPTIGA&#8482;\u00A0Authenticate\u00A0NBT to read out the current state of the LED</string>
+    <string name="string_write_tap">Please tap your mobile phone to the OPTIGA&#8482;\u00A0Authenticate\u00A0NBT to configure the LED status</string>
+
+    <string name="string_read">Read from device</string>
+    <string name="string_write">Write to device</string>
+
+    <string name="string_state_on">Enable LED\n</string>
+    <string name="string_state_off">Disable LED\n</string>
+    <string name="string_board_info">The ADT read-out on the PSoC&#8482; host board can be triggered by pressing the user button!</string>
+
+    <string name="string_led_off">The LED is disabled\n</string>
+    <string name="string_led_on">The LED is enabled\n</string>
+    <string name="string_led_set">LED state set\n</string>
+    <string name="string_led_unknown">The LED state is unknown\n</string>
+
+    <string name="string_error">An error occurred, please retry!\n</string>
+
+    <string name="scan_info">Please make sure to give the app essential location permissions</string>
+    <string name="phone_desc">Phone icon</string>
+    <string name="tag_desc">Tag icon</string>
+    <string name="state_desc">Stage icon</string>
+    <string name="return_desc">Return button</string>
+    <string name="write_desc">Writing to tag icon</string>
+
+</resources>

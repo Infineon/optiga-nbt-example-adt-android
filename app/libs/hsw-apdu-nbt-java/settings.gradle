@@ -1,0 +1,28 @@
+// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
+//
+// SPDX-License-Identifier: MIT
+
+/*
+ * This file contains the gradle settings
+ */
+
+rootProject.name = 'com.infineon.hsw.apdu.nbt'
+gradle.ext.major = 1
+gradle.ext.minor = 1
+gradle.ext.patch = 1
+gradle.ext.prerelease = ''
+
+// Dependencies
+include('com.infineon.hsw.apdu')
+include('com.infineon.hsw.utils')
+include('com.infineon.hsw.channel') // Dependency of APDU library
+
+project(':com.infineon.hsw.apdu').projectDir = file("../hsw-apdu-java")
+project(':com.infineon.hsw.utils').projectDir = file('../hsw-utils-java')
+project(':com.infineon.hsw.channel').projectDir = file("../hsw-channel-java")
+
+// These files are for internal development purposes and will not be present
+// in the release package.
+gradle.ext.test = 'src/test/test.gradle'
+gradle.ext.test_settings = 'src/test/test-settings.gradle'
+if (file(gradle.ext.test).exists()) { apply from: gradle.ext.test_settings }

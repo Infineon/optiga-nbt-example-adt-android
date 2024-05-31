@@ -1,0 +1,18 @@
+// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
+//
+// SPDX-License-Identifier: MIT
+
+/*
+ * This file contains the gradle build configuration
+ */
+
+plugins {
+    id 'java-library'
+}
+
+if (file(gradle.ext.test).exists()) { apply from: gradle.ext.test }
+
+dependencies {
+    implementation project(':com.infineon.hsw.ndef')
+    implementation project(':com.infineon.hsw.utils')
+}
