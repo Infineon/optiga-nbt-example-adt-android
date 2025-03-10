@@ -47,7 +47,7 @@ Initialise the channel provider using ChannelFactory. Below example illustrates 
    byte[] response = channel.connect(null);
 ```
 
-Transmit an C-APDU to select application via the initialised channel and receive R-APDU via the same channel:
+Transmit an C-APDU to select application via the initialized channel and receive R-APDU via the same channel:
 
 ```java
    byte[] commandSelectApplication = new byte[] {0x00, (byte)0xA4, 0x04, 0x00, 0x07, (byte) 0xD2, 0x76,0x00, 0x00, (byte)0x85, 0x01, 0x01, 0x00};

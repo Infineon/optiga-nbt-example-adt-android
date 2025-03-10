@@ -18,7 +18,7 @@ To know more on the functions supported by this library, please check the API do
    import com.infineon.hsw.apdu.ApduChannel;
    ```
 
-2. Build a C-APDU and send it via the initialised channel and and receive the R-APDU. R-APDU is parsed and its status word (SW) is extracted
+2. Build a C-APDU and send it via the initialized channel and receive the R-APDU. R-APDU is parsed and its status word (SW) is extracted
 
    ```java
    static final byte CLA = (byte)0x00;

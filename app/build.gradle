@@ -1,20 +1,17 @@
-// SPDX-FileCopyrightText: 2024 Infineon Technologies AG
-//
-// SPDX-License-Identifier: MIT
-
 plugins {
     id 'com.android.application'
 }
 
 android {
-    compileSdk 32
+    compileSdk 35
+    buildToolsVersion "35.0.0"
 
     defaultConfig {
         applicationId "com.infineon.css.nbt_adt_demonstrator"
         minSdk 30
-        targetSdk 32
-        versionCode 1
-        versionName "1.0"
+        targetSdk 34
+        versionCode 10002
+        versionName "1.0.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -25,6 +22,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
     namespace 'com.infineon.css.nbt_adt_demonstrator'
 }
 

@@ -1,13 +1,13 @@
 <!--
-SPDX-FileCopyrightText: 2024 Infineon Technologies AG
+SPDX-FileCopyrightText: Copyright (c) 2024-2025 Infineon Technologies AG
 SPDX-License-Identifier: MIT
 -->
 
 # OPTIGA™ Authenticate NBT ADT Application for Android
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
-[![REUSE Compliance Check](https://github.com/Infineon/optiga-nbt-example-adt-android/actions/workflows/linting-test.yml/badge.svg?branch=main)](https://github.com/Infineon/optiga-nbt-example-adt-android/actions/workflows/linting-test.yml)
-
+[![REUSE compliance check](https://github.com/Infineon/optiga-nbt-example-adt-android/actions/workflows/linting-test.yml/badge.svg?branch=main)](https://github.com/Infineon/optiga-nbt-example-adt-android/actions/workflows/linting-test.yml)
+[![Android build](https://github.com/Infineon/optiga-nbt-example-adt-android/actions/workflows/android-build.yml/badge.svg?branch=main)](https://github.com/Infineon/optiga-nbt-example-adt-android/actions/workflows/android-build.yml)
 
 This is the *NBT Asynchronous Data Transfer* mobile phone app, a Java-based *Android Studio* project which showcases the OPTIGA™ Authenticate NBT in the *host parameterization via asynchronous data transfer (ADT)* use case.
 
@@ -34,13 +34,13 @@ Information on how to setup and use this example application to evaluate the OPT
 - NFC-enabled Android device running on API level 30 or higher (Android 11+)
 - [OPTIGA™ Authenticate NBT Development Kit](https://www.infineon.com/OPTIGA-Authenticate-NBT-Dev-Kit), consisting of:
   - [OPTIGA™ Authenticate NBT Development Shield](https://www.infineon.com/OPTIGA-Authenticate-NBT-Dev-Shield)
-  - [PSoC™ 62S2 Wi-Fi Bluetooth® Prototyping Kit](https://www.infineon.com/CY8CPROTO-062S2-43439) as host microcontroller board
+  - [PSOC™ 62S2 Wi-Fi Bluetooth® Prototyping Kit](https://www.infineon.com/CY8CPROTO-062S2-43439) as host microcontroller board
 - Associated example applications
   - *NBT Asynchronous Data Transfer* mobile phone app ([Android](https://github.com/Infineon/optiga-nbt-example-adt-android) **\*this application\*** or [iOS](https://github.com/Infineon/optiga-nbt-example-adt-ios))
     - Example application for the *host parameterization via ADT* use case
   - *NBT Asynchronous Data Transfer* embedded application ([ModusToolbox™](https://github.com/Infineon/mtb-example-optiga-nbt-adt))
     - Example application for the *host parameterization via ADT* use case
-    - Targets the [PSoC™ 62S2 Wi-Fi Bluetooth® Prototyping Kit](https://www.infineon.com/CY8CPROTO-062S2-43439), included in the [OPTIGA™ Authenticate NBT Development Kit](https://www.infineon.com/OPTIGA-Authenticate-NBT-Dev-Kit)
+    - Targets the [PSOC™ 62S2 Wi-Fi Bluetooth® Prototyping Kit](https://www.infineon.com/CY8CPROTO-062S2-43439), included in the [OPTIGA™ Authenticate NBT Development Kit](https://www.infineon.com/OPTIGA-Authenticate-NBT-Dev-Kit)
   - *NBT Personalization* mobile phone app ([Android](https://github.com/Infineon/optiga-nbt-example-perso-android) or [iOS](https://github.com/Infineon/optiga-nbt-example-perso-ios))
     - (Optional) Example application for the *personalization of the OPTIGA™ Authenticate NBT via NFC*
     - To configure the OPTIGA™ Authenticate NBT for the desired use case or to reset it to its delivery condition
@@ -54,7 +54,7 @@ This project is intended to be loaded and compiled using *Android Studio*. To do
 The associated example applications for this use case must be loaded onto their target devices.
 
 - The embedded application needs to be flashed on the OPTIGA™ Authenticate NBT Development Kit
-  - For flashing the PSoC™ microcontroller, it is recommended to use *ModusToolbox™*
+  - For flashing the PSOC™ microcontroller, it is recommended to use *ModusToolbox™*
 - The mobile phone app(s) need to be installed on the mobile phone
   - For installing Android applications, it is recommended to use *Android Studio*
   - For installing iOS applications, it is recommended to use *Xcode*
@@ -63,7 +63,7 @@ The associated example applications for this use case must be loaded onto their 
 
 The example applications showcase the *host parameterization via ADT* use case by utilizing the OPTIGA™ Authenticate NBT's ADT functionality to transfer data from an NFC-enabled mobile phone to the embedded host system via NFC/I2C.
 
-The use case is demonstrated with the simple example to parametrize the state of a LED on the OPTIGA™ Authenticate NBT Development Kit from the mobile phone app. Depending on the data sent by the Android application, the PSoC™'s LED is switched on or off.
+The use case is demonstrated with the simple example to parametrize the state of a LED on the OPTIGA™ Authenticate NBT Development Kit from the mobile phone app. Depending on the data sent by the Android application, the PSOC™'s LED is switched on or off.
 In *ADT mode*, the data is transferred between the OPTIGA™ Authenticate NBT's NFC and I2C interface at different points in time. The data is written to the OPTIGA™ Authenticate NBT via one interface, stored in its file system, and later retrieved via the other interface.
 
 To evaluate the use case, follow these steps:
@@ -73,7 +73,7 @@ To evaluate the use case, follow these steps:
 - Launch the *NBT Asynchronous Data Transfer* mobile phone app
 - Choose "Read from device" and tap the phone to the OPTIGA™ Authenticate NBT. The state shown in the GUI should represent the actual LED state
 - Choose "Write to device", select the desired LED state, and tap the mobile phone the OPTIGA™ Authenticate NBT
-- Compared to the *Pass-Through (PT) mode*, there is no change to the LED state as the data is cached on the OPTIGA™ Authenticate NBT and later retrieved by the PSoC™ microcontroller
+- Compared to the *Pass-Through (PT) mode*, there is no change to the LED state as the data is cached on the OPTIGA™ Authenticate NBT and later retrieved by the PSOC™ microcontroller
 - Press the OPTIGA™ Authenticate NBT Development Kit's user button to trigger an update, reading the data from the OPTIGA™ Authenticate NBT and setting the LED state to the selected configuration
 
 ## Operational use case flow
@@ -88,7 +88,7 @@ To perform a host parametrization or configuration via ADT, the mobile phone ini
 
 The GUI enables the user to interact with the Android application. In this particular use case, the user can choose between writing to or reading from the OPTIGA™ Authenticate NBT in the *ADT mode*.
 
-To demonstrate a potential asynchronous data transfer, this example application is sending an on/off command to control a LED on the [PSoC™ 62S2 Wi-Fi Bluetooth® Prototyping Kit](https://www.infineon.com/CY8CPROTO-062S2-43439).
+To demonstrate a potential asynchronous data transfer, this example application is sending an on/off command to control a LED on the [PSOC™ 62S2 Wi-Fi Bluetooth® Prototyping Kit](https://www.infineon.com/CY8CPROTO-062S2-43439).
 By choosing the *Read from device* option, the user can read out the current state of the LED and by choosing the *Write to device* option the user can enable or disable the LED using the *Disable LED / Enable LED* button.
 
 In both cases, the OPTIGA™ Authenticate NBT needs to be tapped to the mobile phone to initiate the selected communication.
@@ -141,4 +141,7 @@ In case of questions regarding this repository and its contents, refer to [MAINT
 
 Please see our [LICENSE](LICENSE) for copyright and license information.
 
-This project follows the [REUSE](https://reuse.software/) approach, so copyright and licensing information is available for every file (including third party components) either in the file header, an individual *.license file or the .reuse/dep5 file. All licenses can be found in the [LICENSES](LICENSES) folder.
+This project follows the [REUSE](https://reuse.software/) approach, so copyright and licensing
+information is available for every file (including third party components) either in the file
+header, an individual *.license file or the [REUSE.toml](REUSE.toml) file. All licenses can be found in the
+[LICENSES](LICENSES) folder.

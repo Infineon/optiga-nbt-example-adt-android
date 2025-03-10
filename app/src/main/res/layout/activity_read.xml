@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- SPDX-FileCopyrightText: 2024 Infineon Technologies AG -->
+<!-- SPDX-FileCopyrightText: Copyright (c) 2024-2025 Infineon Technologies AG -->
 <!-- SPDX-License-Identifier: MIT -->
 
 <androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"

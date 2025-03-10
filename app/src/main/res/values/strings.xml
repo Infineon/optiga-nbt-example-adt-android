@@ -1,4 +1,4 @@
-<!-- SPDX-FileCopyrightText: 2024 Infineon Technologies AG -->
+<!-- SPDX-FileCopyrightText: Copyright (c) 2024-2025 Infineon Technologies AG -->
 <!-- SPDX-License-Identifier: MIT -->
 
 <resources>
@@ -22,7 +22,7 @@
 
     <string name="string_state_on">Enable LED\n</string>
     <string name="string_state_off">Disable LED\n</string>
-    <string name="string_board_info">The ADT read-out on the PSoC&#8482; host board can be triggered by pressing the user button!</string>
+    <string name="string_board_info">The ADT read-out on the PSOC&#8482; host board can be triggered by pressing the user button!</string>
 
     <string name="string_led_off">The LED is disabled\n</string>
     <string name="string_led_on">The LED is enabled\n</string>
